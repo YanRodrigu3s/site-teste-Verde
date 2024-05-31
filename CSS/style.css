@@ -1,0 +1,234 @@
+/* Resetando margens e preenchimentos de todos os elementos, 
+definindo box-sizing como border-box para um modelo de caixa consistente, 
+removendo decoração de texto, bordas e contornos, 
+definindo comportamento de rolagem suave e definindo a família de fontes padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* Definindo variáveis personalizadas de CSS para cores e fonte */
+:root{
+    --bg-color:#080808;
+    --second-bg-color:#131313;
+    --text-color: white;
+    --main-color:#00ffee;
+}
+
+
+/* Definindo o tamanho base da fonte e prevenindo transbordo horizontal */
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+
+/* Definindo a cor de fundo e a cor do texto para o corpo */
+body{
+    /* background-color: #08080876;cinza top */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Estilizando o cabeçalho: posição fixa, largura total, 
+preenchimento, transparência do fundo, layout flexível e z-index */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 12% 40px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+
+/* Estilizando o logo: tamanho da fonte, cor, peso da fonte, alteração do cursor, efeito de transição */
+.logo{
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/* Adicionando um efeito de escala ao passar o mouse sobre o logo */
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+/* Adicionando sombra ao texto dentro do span no logo */
+.logo span{
+    text-shadow: 0 0 15px var(--main-color);
+}
+
+
+/* Estilizando links do menu: tamanho da fonte, cor, margem, peso da fonte, efeito de transição e borda */
+.menu a{
+    font-size: 18px;
+    color: var(--text-color);
+    margin-left: 40px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+
+/* Alterando a cor e a borda dos links do menu ao passar o mouse e quando ativo */
+.menu a:hover, .menu a.ativo{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+/* Estilizando o ícone do menu: tamanho da fonte, cor e propriedade de exibição */
+#menu-icon{
+    font-size: 36px;
+    color: var(--main-color);
+    display: none;
+}
+
+
+/* Estilizando a seção: altura mínima e preenchimento */
+section{
+    min-height: 100vh;
+    padding: 100px 12% 100px;
+}
+
+
+/* Estilizando a área principal: layout flexível, alinhamento centralizado e espaçamento */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+
+/* Estilizando o conteúdo principal: layout flexível em coluna, alinhamento à esquerda e margem superior */
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+/* Estilizando spans: cor principal */
+span{
+    color: var(--main-color);
+}
+
+
+/* Estilizando spans dentro do logo: cor principal */
+.logo span{
+    color: var(--main-color);
+}
+
+
+/* Estilizando h3 dentro do conteúdo principal: margens e tamanho da fonte */
+.home-content h3{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+
+/* Estilizando h1 dentro do conteúdo principal: tamanho da fonte, peso da fonte, margem superior e altura da linha */
+.home-content h1{
+    font-size: 55px;
+    font-weight: 500;
+    margin-top: 15px;
+    line-height: 1;
+}
+
+
+/* Estilizando a imagem principal: bordas arredondadas */
+.home-img{
+    border-radius: 50%;
+}
+
+
+/* Estilizando a imagem dentro da imagem principal: posição relativa, tamanho, bordas arredondadas, sombra, cursor e transição */
+.home-img img{
+    position: relative;
+    top: 30px;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+
+/* Adicionando efeitos de sombra ao passar o mouse sobre a imagem principal */
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var (--main-color);
+}
+
+
+/* Estilizando parágrafos dentro do conteúdo principal: tamanho da fonte, peso da fonte, altura da linha e largura máxima */
+.home-content p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+
+/* Estilizando ícones sociais: exibição, alinhamento, tamanho, fundo, borda, tamanho da fonte, bordas arredondadas, cor, margens e transição */
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 25px;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 30px 15px 30px 0;
+    transition:  0.3s ease-in-out;
+}
+
+
+/* Alterando a cor, transformando e adicionando sombra ao ícone social ao passar o mouse */
+.social-icon a:hover{
+    color: var(--text-color);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 15px var(--main-color);
+    background-color: var(--main-color);
+}
+
+
+/* Estilizando o texto da animação: tamanho da fonte, peso da fonte e largura mínima */
+.animacao-texto{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+
+/* Estilizando spans dentro do texto da animação: posição relativa */
+.animacao-texto span{
+    position: relative;
+}
+
