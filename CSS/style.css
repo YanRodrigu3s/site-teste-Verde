@@ -268,6 +268,62 @@ span{
 
 /***************************************************/
 /***************************************************/
+/************  ESTILIZANDO SOBRE  *********/
+/***************************************************/
+/***************************************************/
+
+
+
+
+
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.sobre img{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    top: 30px;
+    width: 32vw;
+    border-radius: 20%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.sobre img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
+.sobre p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+    text-align: justify;
+    gap: 20px;
+}
+
+.sobre h2{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: var(--main-color);
+    text-shadow: 0 0 20px var(--main-color);
+}
+
+
+
+
+
+
+/***************************************************/
+/***************************************************/
 /************  ESTILIZANDO ESPECIALIDADES  *********/
 /***************************************************/
 /***************************************************/
@@ -438,10 +494,10 @@ span{
 
 
     body{
-        background-color: rgba(0, 0, 0, 0.508);
+        /* background-color: rgba(0, 0, 0, 0.508); */
     }
 
-    
+
     #menu-icon{
         display: block;
     }
@@ -532,7 +588,7 @@ span{
 
 
     .social-icon a{
-        margin-left: 190px;
+        margin-left: 170px;
         width: 95px;
         height: 95px;
         font-size: 65px;
@@ -599,7 +655,56 @@ span{
 
 
     .lista-itens{
-        max-width: 550px;
+        max-width: 480px;
     }
+
+
+
+
+
+    /***********************************/
+    /***********************************/
+    /*********    SOBRE    *************/
+    /***********************************/
+    /***********************************/
+
+
+
+
+
+    .sobre{
+        flex-direction: column;
+        gap: 100px;
+    }
+    
+    .sobre img{
+        width: 430px;
+        height: 430px;
+    }
+    
+    .sobre p{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 430px;
+        text-align: justify;
+        margin-top: 30px;
+    }
+    
+    .sobre h2{
+        font-size: 40px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+
+
+
+
+
+
+
 }
+
+
 
