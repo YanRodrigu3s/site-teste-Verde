@@ -150,6 +150,40 @@
         </div><!--CONTAINER-SERVICOS-->
     </section><!--SERVIÇOS-->
 
+    <!-------------------------->
+    <!-------------------------->
+
+    <section class="contato" id="contato">
+        
+        <h2>Entre em <span>contato.</span></h2>
+        <form action="post">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo" id="nome" required>
+                <input type="email" placeholder="E-mail" id="email" required>
+            </div><!--INPUT-BOX-->
+
+            <div class="input-box">
+                <input type="number" placeholder="Telefone" id="numero-telefone">
+                <input type="text" placeholder="Assunto">
+            </div><!--INPUT-BOX-->
+
+            <textarea cols="30" rows="8" placeholder="Digite sua mensagem" id="mensagem-usuario" required></textarea></textarea>
+
+            <div class="btn-enviar"> <input type="submit" id="btn-enviar" onclick="validateFieldsAndSend()"> </div>
+        </form>
+    </section><!--CONTATO-->
+
+    <!-------------------------->
+    <!-------------------------->
+
+    <footer>
+        <h2>
+            &copy IJY Sistemas, todos os direitos reservados.
+        </h2>
+    </footer>
+
+
     <script src="JS/script.js"></script>
 </body>
 </html>
+
