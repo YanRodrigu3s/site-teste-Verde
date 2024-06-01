@@ -1,3 +1,7 @@
+/**********************************************/
+/***********  ESTILIZANDO GERAL  **************/
+/**********************************************/
+
 /* Resetando margens e preenchimentos de todos os elementos, 
 definindo box-sizing como border-box para um modelo de caixa consistente, 
 removendo decoração de texto, bordas e contornos, 
@@ -38,15 +42,22 @@ body{
 }
 
 
+
+/***************************************************/
+/****************  ESTILIZANDO HEADER  *************/
+/***************************************************/
+
+
+
 /* Estilizando o cabeçalho: posição fixa, largura total, 
 preenchimento, transparência do fundo, layout flexível e z-index */
 header{
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
     padding: 40px 12% 40px;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: #08080876;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,6 +111,13 @@ header{
     color: var(--main-color);
     display: none;
 }
+
+
+
+/***************************************************/
+/****************  ESTILIZANDO HOME  ***************/
+/***************************************************/
+
 
 
 /* Estilizando a seção: altura mínima e preenchimento */
@@ -180,7 +198,7 @@ span{
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
-                0 0 100px var (--main-color);
+                0 0 100px var(--main-color);
 }
 
 
@@ -232,3 +250,149 @@ span{
     position: relative;
 }
 
+
+/***************************************************/
+/************  ESTILIZANDO ESPECIALIDADES  *********/
+/***************************************************/
+
+
+
+/* Estilizando o título principal: tamanho da fonte, alinhamento e margens */
+.heading{
+    font-size: 80px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+/* Estilizando a seção de especialidades: preenchimento e cor de fundo */
+.especialidades{
+    padding: 100px 10px;
+    background: var(--second-bg-color);
+}
+
+
+/* Estilizando o título das especialidades: margem inferior */
+.especialidades h2{
+    margin-bottom: 50px;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+/* Estilizando a lista de itens: largura máxima, centralização, layout flexível e posição */
+.lista-itens{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+/* Estilizando o pseudo-elemento antes da lista de itens: posição, tamanho e cor */
+.lista-itens::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
+}
+
+
+/* Estilizando cada item da lista: margem inferior, largura e posição */
+.lista-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Removendo a margem inferior do último item da lista */
+.lista-item:last-child{
+    margin-bottom: 0;
+}
+
+
+/* Estilizando itens ímpares da lista: preenchimento e alinhamento do texto */
+.lista-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+
+/* Estilizando itens pares da lista: preenchimento */
+.lista-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+
+/* Estilizando o ponto de cada item da lista: tamanho, cor, sombra, posição, borda e borda arredondada */
+.lista-ponto{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color),
+                0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+
+/* Estilizando o conteúdo de cada item da lista: cor de fundo, borda, preenchimento, borda arredondada, sombra, cursor e transição */
+.lista-conteudo{
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding: 30px 50px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Adicionando efeito de escala e sombra ao passar o mouse sobre o conteúdo do item da lista */
+.lista-conteudo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+
+/* Estilizando o título dentro do conteúdo do item da lista: tamanho da fonte, cor, margens e peso da fonte */
+.lista-conteudo h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+
+/* Estilizando o parágrafo dentro do conteúdo do item da lista: cor, tamanho da fonte, peso da fonte e altura da linha */
+.lista-conteudo p{
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+
+/* Estilizando a barra de rolagem: largura */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+
+/* Estilizando o polegar da barra de rolagem: cor de fundo */
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+
+/* Estilizando a trilha da barra de rolagem: cor de fundo e largura */
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
