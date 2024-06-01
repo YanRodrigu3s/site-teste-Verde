@@ -336,7 +336,7 @@ span{
 .heading{
     font-size: 80px;
     text-align: center;
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 
@@ -478,6 +478,88 @@ span{
 
 /*****************************************/
 /*****************************************/
+/**********  NOSSOS SERVIÇOS  ************/
+/*****************************************/
+/*****************************************/
+
+
+
+
+.servicos{
+    background-color: gray;
+    margin: 0 auto;
+}
+
+
+.servicos h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 0 0 3px var(--main-color);
+    margin-bottom: 50px;
+}
+
+
+.container-servicos{
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+
+.box-servicos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    cursor: pointer;
+}
+
+
+.container-servicos .box-servicos{
+    border: solid 1px var(--main-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem 2rem 2.5rem;
+    background-color: #00ffee24;
+    transition: 0.7s ease;
+}
+
+
+.container-servicos .box-servicos:hover{
+    background-color: var(--main-color);
+    transform: scale(1.1);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+
+.box-servicos i{
+    font-size: 45px;
+    transition: 0.1s ease;
+}
+
+
+.box-servicos h3{
+    font-size: 25px;
+    transition: 0.1s ease;
+}
+
+
+.box-servicos p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    transition: 0.1s ease;
+}
+
+
+
+/*****************************************/
+/*****************************************/
 /****************  MOBILE  ***************/
 /*****************************************/
 /*****************************************/
@@ -492,10 +574,10 @@ span{
         padding: 2rem 3%;
     }
 
-
+/* 
     body{
-        /* background-color: rgba(0, 0, 0, 0.508); */
-    }
+        background-color: rgba(0, 0, 0, 0.508);
+    } */
 
 
     #menu-icon{
@@ -703,7 +785,49 @@ span{
 
 
 
+        
+    /*****************************************/
+    /*****************************************/
+    /**********  NOSSOS SERVIÇOS  ************/
+    /*****************************************/
+    /*****************************************/
 
+
+
+
+
+
+
+    .container-servicos{
+        flex-direction: column-reverse;
+    }
+
+
+    .box-servicos{
+        width: 350px;
+        margin: 0 auto;
+    }
+
+
+    .box-servicos i{
+        font-size: 40px;
+        transition: 0.1s ease;
+    }
+
+
+    .box-servicos h3{
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .box-servicos p {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 20px;
+        transition: 0.1s ease;
+        text-align: justify;
+    }
 
 
 }
